@@ -44,6 +44,7 @@ abstract class Controller extends AbstractController {
 		$params["header"] = $this->getHeader();
 		$params["auth"] = $this->getAuth();
 		$params["top"] = $this->getTop();
+		$params["top_right"] = $this->getTopRight();
 		$params["slider"] = $this->getSlider();
 		$params["left"] = $this->getLeft();
 		$params["right"] = $this->getRight();
@@ -83,6 +84,14 @@ abstract class Controller extends AbstractController {
 		$topmenu->items = $items;
 		return $topmenu;
 	}
+
+	protected function getTopRight() {
+		$items = MenuDB::getTopRightMenu();
+		$toprightmenu = new TopRightMenu();
+		$toprightmenu->uri = $this->url_active;
+		$toprightmenu->items = $items;
+		return $toprightmenu;
+	}
 	
 	protected function getSlider() {
 		$course = new CourseDB();
@@ -93,10 +102,7 @@ abstract class Controller extends AbstractController {
 	}
 	
 	protected function getLeft() {
-		$items = MenuDB::getMainMenu();
-		$mainmenu = new MainMenu();
-		$mainmenu->uri = $this->url_active;
-		$mainmenu->items = $items;
+		
 		if ($this->auth_user) {
 			$user_panel = new UserPanel();
 			$user_panel->user = $this->auth_user;
@@ -114,7 +120,7 @@ abstract class Controller extends AbstractController {
 			$poll->data = PollDataDB::getAllOnPollID($poll_db->id);
 		}
 		else $poll = "";
-		return $user_panel.$mainmenu.$poll;
+		return $user_panel.$poll;
 	}
 	
 	protected function getRight() {

@@ -18,53 +18,11 @@
         <div class="collapse navbar-collapse" id="basicExampleNav">
 
         	<ul class="navbar-nav mr-auto smooth-scroll">
-        		<li class="nav-item">
-        			<a href="#intro" class="nav-link waves-effect waves-light">Home</a>
-        		</li>
-        		<li class="nav-item">
-        			<a href="#profile" class="nav-link waves-effect waves-light">Профиль</a>
-        		</li>
-            <li class="nav-item">
-              <a href="#fittings" class="nav-link waves-effect waves-light">Фурнитура</a>
-            </li>
-        		<li class="nav-item">
-        			<a href="#examples" class="nav-link waves-effect waves-light">Виды изделий</a>
-        		</li>
-        		<li class="nav-item">
-        			<a href="#gallery" class="nav-link waves-effect waves-light">News</a>
-        		</li>
-        		<li class="nav-item">
-        			<a href="#contact" class="nav-link waves-effect waves-light">Support</a>
-        		</li>
+        		<?=$top?>
         	</ul>
 
         	<ul class="navbar-nav nav-flex-icons">
-        	<li class="nav-item">
-        		<a href="#" class="nav-link waves-effect waves-light">
-        			<i class="fas fa-car-side"></i>
-        		</a>
-        	</li>
-        	<li class="nav-item">
-        		<a href="#" class="nav-link waves-effect waves-light">
-        			<i class="fas fa-lightbulb"></i>
-        		</a>
-        	</li>
-        	<li class="nav-item">
-        		<a href="#" class="nav-link waves-effect waves-light">
-        			<i class="fas fa-book"></i>
-        		</a>
-        	</li>
-
-          <li class="nav-item">
-            <li class="nav-item">
-            <a href="#" class="nav-link waves-effect waves-light float-left">
-              <i class="fas fa-phone"> (044)232-90-20</i>
-            </a>
-            <a href="#" class="nav-link waves-effect waves-light">
-              <i class="fa fa-mobile"> (067)408-16-14</i>
-            </a>
-          </li>
-          </li>
+        	<?=$top_right?>
         </ul>
         
         </div>

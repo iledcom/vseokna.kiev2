@@ -16,6 +16,10 @@ class MenuDB extends ObjectDB {
 	public static function getTopMenu() {
 		return ObjectDB::getAllOnField(self::$table, __CLASS__, "type", TOPMENU, "id");
 	}
+
+	public static function getTopRightMenu() {
+		return ObjectDB::getAllOnField(self::$table, __CLASS__, "type", TOPRIGHTMENU, "id");
+	}
 	
 	public static function getMainMenu() {
 		return ObjectDB::getAllOnField(self::$table, __CLASS__, "type", MAINMENU, "id");

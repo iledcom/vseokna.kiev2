@@ -3,9 +3,9 @@
 class MainController extends Controller {
 
 	public function actionIndex() {
-		$this->title = "Как создать свой сайт";
-		$this->meta_desc = "Как создать свой сайт? Ответ на этот вопрос находится на этом сайте. Огромное количество материалов по темам: как создать свой сайт и как раскрутить сайт!";
-		$this->meta_key = "как создать свой сайт, создание сайта";
+		$this->title = "Пластиковые окна по лучшей цене";
+		$this->meta_desc = "Пластиковые окна по лучшей цене, с качественной фурнитурой, бесплатной доставкой";
+		$this->meta_key = "Пластиковые окна, металопластиковые окна, пластиковые окна цена, цена пластиковые окна, пластиковые окна купить, купить пластиковые окна";
 		
 		$articles = ArticleDB::getAllShow(Config::COUNT_ARTICLES_ON_PAGE, $this->getOffset(Config::COUNT_ARTICLES_ON_PAGE), true);
 		$pagination = $this->getPagination(ArticleDB::getCount(), Config::COUNT_ARTICLES_ON_PAGE, "/");

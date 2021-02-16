@@ -9,6 +9,7 @@
 	
 	define("MAINMENU", 1);
 	define("TOPMENU", 2);
+	define("TOPRIGHTMENU", 3);
 	define("KB_B", 1024);
 	define("PAY_COURSE", 1);
 	define("FREE_COURSE", 2);
