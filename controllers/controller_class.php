@@ -45,6 +45,7 @@ abstract class Controller extends AbstractController {
 		$params["auth"] = $this->getAuth();
 		$params["top"] = $this->getTop();
 		$params["top_right"] = $this->getTopRight();
+		$params["top_left"] = $this->getTopLeft();
 		$params["slider"] = $this->getSlider();
 		$params["left"] = $this->getLeft();
 		$params["right"] = $this->getRight();
@@ -62,7 +63,7 @@ abstract class Controller extends AbstractController {
 		$header->meta("viewport", "width=device-width", false);
 		$header->favicon = "/favicon.ico";
 		$header->css = array("https://use.fontawesome.com/releases/v5.11.2/css/all.css", "../css/bootstrap.min.css", "../css/mdb.min.css", "../css/style.min.css", "/css/landing.css");
-		$header->js = array("../js/jquery-3.4.0.min.js", "../js/popper.min.js", "../js/bootstrap.min.j", "../js/mdb.min.js", "../js/common.js");
+		$header->js = array("../js/jquery-3.4.0.min.js", "../js/popper.min.js", "../js/bootstrap.min.js", "../js/mdb.min.js", "../js/common.js");
 		return $header;
 	}
 	
@@ -92,6 +93,14 @@ abstract class Controller extends AbstractController {
 		$toprightmenu->items = $items;
 		return $toprightmenu;
 	}
+
+	protected function getTopLeft() {
+		$items = MenuDB::getTopLeftMenu();
+		$topleftmenu = new TopLeftMenu();
+		$topleftmenu->uri = $this->url_active;
+		$topleftmenu->items = $items;
+		return $topleftmenu;
+	}
 	
 	protected function getSlider() {
 		$course = new CourseDB();
@@ -102,7 +111,10 @@ abstract class Controller extends AbstractController {
 	}
 	
 	protected function getLeft() {
-		
+		$items = MenuDB::getMainMenu();
+		$mainmenu = new MainMenu();
+		$mainmenu->uri = $this->url_active;
+		$mainmenu->items = $items;
 		if ($this->auth_user) {
 			$user_panel = new UserPanel();
 			$user_panel->user = $this->auth_user;

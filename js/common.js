@@ -13,3 +13,22 @@ $(window).scroll(function() {
   }
 
 });
+
+$(window).scroll(function() {
+
+  var target = $(this).scrollTop();
+
+  if(target == 0) {
+
+    $('.dropdown-menu').removeClass('rgba-black-strong').addClass('transparent');
+
+  } else {
+
+    $('.dropdown-menu').removeClass('transparent').addClass('rgba-black-strong');
+
+  }
+
+});
+
+
+

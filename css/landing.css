@@ -9,7 +9,7 @@ html,body,.landing, #intro{
 }
 
 .top-nav-collapse{
-	background-color: #150f12;
+	background-color: rgba(0, 0, 0, 0.7);
 }	
 
 @media (max-width: 768px) {
@@ -71,4 +71,14 @@ html,body,.landing, #intro{
 
 .png_little {
 	height: 35%;
+}
+
+.transparent {
+	background: transparent;
+}
+
+.dropdown-menu {
+	border: 0;
+	border-radius:0;
+	margin-top: 5px !important;
 }
