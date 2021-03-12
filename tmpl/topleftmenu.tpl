@@ -32,7 +32,7 @@ function getTree($dataset) {
 $cat = getCat($items);
 $tree = getTree($cat);
 
-//Шаблон для вывода меню в виде дерева - не используем в связи со спецификой верстки MDB bootstrap
+//Шаблон для вывода меню в виде дерева - не используем в связи со спецификой верстки используемого макета MDB bootstrap
 /*
 function tplMenu($category){
 	$menu = '

@@ -34,15 +34,7 @@
     		<div class="container-fluid d-flex align-items-center justify-content-center h-100">
     			<div class="row d-flex justify-content-center text-center">
     				<div class="col-md-10">
-    					<h2 class="display-4 font-weiht-bold white-text pt-5 mb-2">
-    						vseokna.
-                kiev.ua
-    					</h2>
-    					<hr class="hr-liht">
-    					<h4 class="white-text my-4">
-    						Лучшее для Вас
-    					</h4>
-    					<button class="btn btn-outline-white waves-effect waves-light">Информация <i class="fa fa-book"></i></button>
+    					<?=$section_main?>
     				</div>
     			</div>
     		</div>

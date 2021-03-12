@@ -46,6 +46,7 @@ abstract class Controller extends AbstractController {
 		$params["top"] = $this->getTop();
 		$params["top_right"] = $this->getTopRight();
 		$params["top_left"] = $this->getTopLeft();
+		$params["section_main"] = $this->getSectionMain();
 		$params["slider"] = $this->getSlider();
 		$params["left"] = $this->getLeft();
 		$params["right"] = $this->getRight();
@@ -100,6 +101,13 @@ abstract class Controller extends AbstractController {
 		$topleftmenu->uri = $this->url_active;
 		$topleftmenu->items = $items;
 		return $topleftmenu;
+	}
+
+	protected function getSectionMain() {
+		$elements = SectionMainDB::getSectionMain();
+		$sectionmain = new SectionMain();
+		$sectionmain->elements = $elements;
+		return $sectionmain;
 	}
 	
 	protected function getSlider() {
