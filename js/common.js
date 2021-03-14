@@ -30,5 +30,9 @@ $(window).scroll(function() {
 
 });
 
+$('.dropdown-toggle').dropdown() {
+  // do something…
+})
+
 
 

@@ -2,7 +2,7 @@
 
 class SectionMainDB extends ObjectDB {
 	
-	protected static $table = "section_main";
+	protected static $table = "section_components";
 	
 	public function __construct() {
 		parent::__construct(self::$table);

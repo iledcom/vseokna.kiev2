@@ -47,6 +47,7 @@ abstract class Controller extends AbstractController {
 		$params["top_right"] = $this->getTopRight();
 		$params["top_left"] = $this->getTopLeft();
 		$params["section_main"] = $this->getSectionMain();
+		$params["section_one"] = $this->getSectionOne();
 		$params["slider"] = $this->getSlider();
 		$params["left"] = $this->getLeft();
 		$params["right"] = $this->getRight();
@@ -108,6 +109,16 @@ abstract class Controller extends AbstractController {
 		$sectionmain = new SectionMain();
 		$sectionmain->elements = $elements;
 		return $sectionmain;
+	}
+
+	protected function getSectionOne() {
+		$elements = SectionOneDB::getSectionElements();
+		$card_components = CardDB::getSectionCardComponents();
+		$sectionone = new SectionOne();
+		$sectionone->elements = $elements;
+		$card = new Card();
+		$card->card_components = $card_components;
+		return $sectionone.$card;
 	}
 	
 	protected function getSlider() {
