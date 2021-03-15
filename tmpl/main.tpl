@@ -50,70 +50,8 @@
       <hr class="my-5">
 
       <section id="examples" class="text-center">
-        <h2 class="mb-5 font-weight-bold">Виды изделий</h2>
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="view overlay hoverable">
-              <img src="img/products/window_2.png" alt="" class="img-flid">
-              <div class="mask flex-center rgba-brown-light">
-              </div>
-            </div>
-            <h4 class="my-4 font-weight-bold">Металлопластиковые окна, двери</h4>
-            <p class="grey-text"></p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="view overlay hoverable">
-              <img src="img/products/balconies_2.png" alt="" class="img-flid">
-              <div class="mask flex-center rgba-brown-light">
-              </div>
-            </div>
-            <h4 class="my-4 font-weight-bold">Алюминиевые системы</h4>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, placeat hic recusandae!</p>            
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="view overlay hoverable">
-              <img src="img/products/garage_roller_blinds.png" alt="" class="img-flid">
-              <div class="mask flex-center rgba-brown-light">
-              </div>
-            </div>
-            <h4 class="my-4 font-weight-bold">Гаражные ворота, рольставни</h4>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, placeat hic recusandae!</p>            
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="view overlay hoverable">
-              <img src="img/products/doors.png" alt="" class="img-flid">
-              <div class="mask flex-center rgba-brown-light">
-              </div>
-            </div>
-            <h4 class="my-4 font-weight-bold">Двери</h4>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, placeat hic recusandae!</p>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="view overlay hoverable">
-              <img src="img/products/sliding_systems.png" alt="" class="img-flid">
-              <div class="mask flex-center rgba-brown-light">
-              </div>
-            </div>
-            <h4 class="my-4 font-weight-bold">Раздвижные системы</h4>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, placeat hic recusandae!</p>            
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="view overlay hoverable">
-              <img src="img/products/gazebos.png" alt="" class="img-flid">
-              <div class="mask flex-center rgba-brown-light">
-              </div>
-            </div>
-            <h4 class="my-4 font-weight-bold">Остекление беседок</h4>
-            <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, placeat hic recusandae!</p>            
-          </div>
-        </div>
+       <?=$section_two?>
+        
       </section>
 
       <hr class="my-5">

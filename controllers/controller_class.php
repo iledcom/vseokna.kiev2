@@ -48,6 +48,7 @@ abstract class Controller extends AbstractController {
 		$params["top_left"] = $this->getTopLeft();
 		$params["section_main"] = $this->getSectionMain();
 		$params["section_one"] = $this->getSectionOne();
+		$params["section_two"] = $this->getSectionTwo();
 		$params["slider"] = $this->getSlider();
 		$params["left"] = $this->getLeft();
 		$params["right"] = $this->getRight();
@@ -112,13 +113,23 @@ abstract class Controller extends AbstractController {
 	}
 
 	protected function getSectionOne() {
-		$elements = SectionOneDB::getSectionElements();
-		$card_components = CardDB::getSectionCardComponents();
+		$producers = SectionOneDB::getSectionProducers();
+		$card_components = CardDB::getSectionProducerCard();
 		$sectionone = new SectionOne();
-		$sectionone->elements = $elements;
+		$sectionone->producers = $producers;
 		$card = new Card();
 		$card->card_components = $card_components;
 		return $sectionone.$card;
+	}
+
+	protected function getSectionTwo() {
+		$products = SectionTwoDB::getSectionProducts();
+		$card_components = CardDB::getSectionProductCard();
+		$sectiontwo = new SectionTwo();
+		$sectiontwo->products = $products;
+		$card_products = new CardProducts();
+		$card_products->card_components = $card_components;
+		return $sectiontwo.$card_products;
 	}
 	
 	protected function getSlider() {

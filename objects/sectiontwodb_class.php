@@ -1,6 +1,6 @@
 <?php
 
-class SectionOneDB extends ObjectDB {
+class SectionTwoDB extends ObjectDB {
 	
 	protected static $table = "section_components";
 	
@@ -10,8 +10,8 @@ class SectionOneDB extends ObjectDB {
 		$this->add("text", "ValidateText");
 	}
 	
-	public static function getSectionProducers() {
-		return ObjectDB::getAllOnField(self::$table, __CLASS__, "id", 2);
+	public static function getSectionProducts() {
+		return ObjectDB::getAllOnField(self::$table, __CLASS__, "id", 3);
 	}
 	
 }

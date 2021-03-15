@@ -1,13 +1,11 @@
 <?php
-foreach ($producers as $producer) { 
-		$title = $producer->title;
-		$slogan = $producer->slogan;
-		$button_name = $producer->button_name;
-		$text = $producer->text;
+foreach ($products as $product) { 
+  	$title = $product->title;
+  	$slogan = $product->slogan;
+  	$button_name = $product->button_name;
+  	$text = $product->text;
 	}
 ?>
-
-
 
 <h2 class="mb-5 font-weight-bold">
   <?=$title?>
